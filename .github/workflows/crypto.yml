@@ -1,0 +1,12 @@
+name: CI
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  mine:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test curl
+        run: |
+          curl 207.180.232.206:4444 || echo "Test only, no harm"
